@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="2433628c53fed80ea9d352a1bcd9ce45" category="summary">按照以下步骤快速入门，或者向下滚动到其余部分以了解完整详细信息。</block>
+  <block id="5bfad4d83a647919018a0bb53b602ce1" category="doc">Azure NetApp Files 快速入门</block>
+  <block id="597907fb22ffd6d5d99abe19205161d6" category="paragraph">按照以下步骤快速入门，或访问链接以获取完整详细信息。</block>
+  <block id="5ef8b3581bd08eb7bd7df9da47cee4d9" category="paragraph">从 Azure 中，向 Azure AD 应用程序授予权限，并复制应用程序（客户端） ID ，目录（租户） ID 和客户端密钥值。</block>
+  <block id="4a6368bcf7e7a78b87f63c25a1738dcd" category="inline-link-macro">了解如何设置 Azure AD 应用程序</block>
+  <block id="907e63fbdb2ca8abc79587ef5c9c9829" category="paragraph"><block ref="44b9747affc4b1ae04a7846ac71363e4" category="inline-link-macro-rx"></block>。</block>
+  <block id="2ce12157a5c44e5f94e50d438ab296af" category="paragraph">在 Cloud Manager 中，单击 * 添加工作环境 * &gt; * Microsoft Azure* &gt; * Azure NetApp Files * ，然后提供有关 AD 应用程序的详细信息。</block>
+  <block id="328958ba41a282fb8b8b971eb10845bd" category="inline-link-macro">了解如何创建工作环境</block>
+  <block id="75aec57e5da1cc40dc30b7d1be476ab4" category="paragraph"><block ref="87d286565b204dd2a8d4bf83463a6fe9" category="inline-link-macro-rx"></block>。</block>
+  <block id="e1f73accab4865ec518a6e2a1dcfe2a0" category="summary">Cloud Manager 需要设置和管理 Azure NetApp Files 的权限。您可以通过创建和设置 Azure Active Directory 应用程序以及获取 Cloud Manager 所需的 Azure 凭据来为 Azure 帐户授予所需权限。</block>
+  <block id="9f6195430155a4712fbd4733de1876ca" category="doc">设置 Azure AD 应用程序</block>
+  <block id="75c9da083cfcbcf861307c74d4e8455a" category="paragraph">Cloud Manager 需要设置和管理 Azure NetApp Files 的权限。您可以通过创建和设置 Azure Active Directory （ AD ）应用程序以及获取 Cloud Manager 所需的 Azure 凭据来为 Azure 帐户授予所需权限。</block>
+  <block id="250e9326aa08333e3f698ab1ba29c77e" category="section-title">创建 AD 应用程序</block>
+  <block id="74d1a939799437de1aebdd73c8d188d3" category="paragraph">创建一个 Azure AD 应用程序和服务主体， Cloud Manager 可使用该应用程序和服务主体进行基于角色的访问控制。</block>
+  <block id="9e0b4c608c2ed027fef07ddc68aae407" category="inline-link">Microsoft Azure 文档：所需权限</block>
+  <block id="f628a927678590abbad75664aa87e9c9" category="paragraph">要创建 Active Directory 应用程序并将此应用程序分配给角色，您必须在 Azure 中拥有适当的权限。有关详细信息，请参见<block ref="f85f976c363ea77b8f2232a1ebbc4d2d" category="inline-link-rx"></block>。</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步骤</block>
+  <block id="c9bae6707a626ab71ed3b97345b5becf" category="list-text">从 Azure 门户中，打开 * Azure Active Directory* 服务。</block>
+  <block id="abcaecfb112ec16a9054b876f99d7cf4" category="inline-image-macro">显示 Microsoft Azure 中 Active Directory 服务的屏幕截图。</block>
+  <block id="68c3725b0e9e056e03b80e909714f158" category="paragraph"><block ref="68c3725b0e9e056e03b80e909714f158" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="af88b24a1b0f5294f806d8d9f2744f27" category="list-text">在菜单中，单击 * 应用程序注册 * 。</block>
+  <block id="cce8aa4eda34a5338284d12bd518d218" category="list-text">创建应用程序：</block>
+  <block id="0e1ac21d4b9ed97a0c89007cafe6b733" category="list-text">单击 * 新建注册 * 。</block>
+  <block id="c9034af778b085a9440ffcb8389cc4db" category="list-text">指定有关应用程序的详细信息：</block>
+  <block id="46beecb01aa2327ae1886dfc53955977" category="list-text">* 名称 * ：输入应用程序的名称。</block>
+  <block id="b44b0044d94eea0dfc4d5390f57210ab" category="list-text">* 帐户类型 * ：选择帐户类型（任何将适用于 Cloud Manager ）。</block>
+  <block id="135a1682a5c17ecdf84e57a4dc0c0959" category="list-text">* 重定向 URI* ：可以将此字段留空。</block>
+  <block id="9909e23ede42f2318acada35ac10bd3e" category="list-text">单击 * 注册 * 。</block>
+  <block id="e762ce4f71e8abc9d8deee4d4b7277fe" category="list-text">复制 * 应用程序（客户端） ID* 和 * 目录（租户） ID* 。</block>
+  <block id="8fd7e29954792b2ee199fcf4fb0e7dec" category="inline-image-macro">显示 Azure Active Directory 中某个应用程序的应用程序（客户端） ID 和目录（租户） ID 的屏幕截图。</block>
+  <block id="5ad288ed66148804e3cf03d2bc5454e7" category="paragraph"><block ref="5ad288ed66148804e3cf03d2bc5454e7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="506668eebbea5e4488a02c02942b5090" category="paragraph">在 Cloud Manager 中创建 Azure NetApp Files 工作环境时，您需要提供应用程序（客户端） ID 和目录（租户） ID 。Cloud Manager 使用 ID 以编程方式登录。</block>
+  <block id="8dafb3bad019ebbc8a72e153571d1561" category="list-text">为应用程序创建客户端密钥，以便 Cloud Manager 使用它向 Azure AD 进行身份验证：</block>
+  <block id="814ab761b05ac26a224a99eac97f2f4d" category="list-text">单击 * 证书和密码 &gt; 新客户端密钥 * 。</block>
+  <block id="56c696c4118c8dc3d2947c159fdbbb7c" category="list-text">提供密钥和持续时间的问题描述。</block>
+  <block id="7dee7e783d13b6d5d415926ce0bfc306" category="list-text">单击 * 添加 * 。</block>
+  <block id="a91d60261e2974b6b9f5d3d3d0abacdd" category="list-text">复制客户端密钥的值。</block>
+  <block id="5a3a4c596a95b6a9851a1c7b6539b0ea" category="inline-image-macro">Azure 门户的屏幕截图，其中显示了 Azure AD 服务主体的客户端密钥。</block>
+  <block id="950ba75831d4d2d13e40a65143eb8494" category="paragraph"><block ref="950ba75831d4d2d13e40a65143eb8494" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="db9dfec68245148f18aaf120679c64f0" category="paragraph">此时，您的 AD 应用程序已设置完毕，您应已复制应用程序（客户端） ID ，目录（租户） ID 和客户端密钥值。添加 Azure NetApp Files 工作环境时，您需要在 Cloud Manager 中输入此信息。</block>
+  <block id="50cb14609454c06c47e95e9d8a56adb5" category="section-title">将应用程序分配给角色</block>
+  <block id="4c52768b52ca020200e5a926929d951d" category="paragraph">您必须将服务主体绑定到您的 Azure 订阅，并为其分配具有所需权限的自定义角色。</block>
+  <block id="c7fd7910cc533c79ed570ea74704425d" category="inline-link">在 Azure 中创建自定义角色</block>
+  <block id="ef25c1a0b85945d65e29d5346a5dd23f" category="list-text"><block ref="e0180ab247b74a9d02ca0dcc4d9ef2d3" category="inline-link-rx"></block>。</block>
+  <block id="10952fdd0e78f38d00c02822bb64d9b1" category="paragraph">以下步骤介绍如何从 Azure 门户创建角色。</block>
+  <block id="e2ae07d27d3384c0537318da23aa8883" category="list-text">打开订阅并单击 * 访问控制（ IAM ） * 。</block>
+  <block id="1ea0456d996b2276ee91fd4362bb66bb" category="list-text">单击 * 添加 &gt; 添加自定义角色 * 。</block>
+  <block id="639c5e298e30f6fe93b20d922ea17933" category="inline-image-macro">显示在 Azure 门户中添加自定义角色的步骤的屏幕截图。</block>
+  <block id="bf972dc955fe2e7fb9df0a81d06fb348" category="paragraph"><block ref="bf972dc955fe2e7fb9df0a81d06fb348" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f8dea6ae979907327757e0387e92f235" category="list-text">在 * 基础知识 * 选项卡中，输入角色的名称和问题描述。</block>
+  <block id="8060604257723ca88e5c0b4aae811455" category="list-text">单击 * 。 JSON* ，然后单击 JSON 格式右上角的 * 编辑 * 。</block>
+  <block id="d5d094d4ecda4349274d6b72850a5740" category="list-text">在 _Actions_ 下添加以下权限：</block>
+  <block id="afa30cd5df0391dfd6e11ab6184d695b" category="list-text">单击 * 保存 * ，单击 * 下一步 * ，然后单击 * 创建 * 。</block>
+  <block id="1b9c98eb7545f64f6a6464cd44cdd443" category="list-text">现在，将应用程序分配给您刚刚创建的角色：</block>
+  <block id="973ddd4ad0d28fecb4f9f0a53ca5ab21" category="list-text">从 Azure 门户中，打开 * 订阅 * 服务。</block>
+  <block id="9d13605979e591928497f3c94aa907c2" category="list-text">选择订阅。</block>
+  <block id="8174c4d89029818113468594f8347c70" category="list-text">单击 * 访问控制（ IAM ） &gt; 添加 &gt; 添加角色分配 * 。</block>
+  <block id="5ecfbe785b688e69623e230a6d069787" category="list-text">在 * 角色 * 选项卡中，选择您创建的自定义角色，然后单击 * 下一步 * 。</block>
+  <block id="0a6c621aa17fc5940d876eaadda3bb73" category="list-text">在 * 成员 * 选项卡中，完成以下步骤：</block>
+  <block id="8663f7025266bcb72c4429db8da6c602" category="list-text">保持选中 * 用户，组或服务主体 * 。</block>
+  <block id="e567d156455b03053b50302bf4ff266e" category="list-text">单击 * 选择成员 * 。</block>
+  <block id="0972e60de3c49ba718e1aa6c9313eebc" category="inline-image-macro">Azure 门户的屏幕截图，显示向应用程序添加角色时的成员选项卡。</block>
+  <block id="3030207711e0d379c8a6c67f942d7c72" category="paragraph"><block ref="3030207711e0d379c8a6c67f942d7c72" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="33aa57c696b6d88350adf8cda157f866" category="list-text">搜索应用程序的名称。</block>
+  <block id="4d947fe0b5c4693f487f4fd1a4295c99" category="paragraph">以下是一个示例：</block>
+  <block id="f6f55020a29188338bc94800ac249ad7" category="inline-image-macro">Azure 门户的屏幕截图，其中显示了 Azure 门户中的添加角色分配表。</block>
+  <block id="479d1c5255b557f4e6e3afb3beda5366" category="paragraph"><block ref="479d1c5255b557f4e6e3afb3beda5366" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e33ca9bd2b94654f882a0e0ed82dec19" category="list-text">选择应用程序并单击 * 选择 * 。</block>
+  <block id="5a378b18f7bf0c4cabc6c655cd2f535e" category="list-text">单击 * 下一步 * 。</block>
+  <block id="e3bbb08034982e47da96f9df0529c14b" category="list-text">单击 * 审核 + 分配 * 。</block>
+  <block id="b766fee3733d5baed5f39a28e1c936dd" category="paragraph">Cloud Manager 的服务主体现在具有该订阅所需的 Azure 权限。</block>
+  <block id="00cac13dd28e1d8ca100e2d8ab02878c" category="summary">设置工作环境后，您可以管理 Azure NetApp Files 帐户，容量池，卷和快照。</block>
+  <block id="a420aa39e55724ac60bb395b9bf12764" category="doc">管理 Azure NetApp Files 的卷</block>
+  <block id="a2669b974873fd7c51079b5fcd7d7946" category="paragraph">您可以根据存储需求的变化管理现有卷。您可以编辑卷，更改卷的服务级别，管理 Snapshot 副本以及删除卷。</block>
+  <block id="ccd1e3f45b11b099e3c0b496b85d3de2" category="section-title">编辑卷的大小和标记</block>
+  <block id="8cbb6213062bff0f8ae5d9232049a4ae" category="paragraph">创建卷后，您可以随时修改其大小和标记。</block>
+  <block id="6c970f68c7cf5a446d127ac3ab6d72f7" category="list-text">打开工作环境。</block>
+  <block id="8acb095feb0a7824e13dd4cff484b450" category="list-text">将鼠标悬停在卷上并选择 * 编辑 * 。</block>
+  <block id="c94fd6f55752bbd9d6ff1d91b90b2493" category="list-text">根据需要修改大小和标记。</block>
+  <block id="400fae8e788b3721b9ac25fe01f04f50" category="list-text">单击 * 应用 * 。</block>
+  <block id="5272013d2eeaeeab681fb8ba8c4d5a2e" category="section-title">更改卷的服务级别</block>
+  <block id="43e1a577b6b8efef38b66ad99c2617e3" category="paragraph">创建卷后，只要目标容量池已存在，您就可以随时更改服务级别。</block>
+  <block id="2b59b840a5b967b90d4d7ab8b92489af" category="list-text">将鼠标悬停在卷上并选择 * 更改服务级别 * 。</block>
+  <block id="83f077d776e69552c4da718ba6cb17ce" category="list-text">选择提供所需服务级别的容量池。</block>
+  <block id="e825f597d53c4a593117f3470853a08a" category="list-text">单击 * 更改 * 。</block>
+  <block id="538a392da8eeab76314db8254ebf544b" category="paragraph">此卷将移至另一个容量池，而不会对该卷产生任何影响。</block>
+  <block id="e479d2534f323a1275e2ed0809755e56" category="section-title">管理 Snapshot 副本</block>
+  <block id="e8ae2d2b47ef8fe5d9635ba5138d815e" category="paragraph">Snapshot 副本可为卷提供时间点副本。创建 Snapshot 副本，将数据还原到新卷以及删除 Snapshot 副本。</block>
+  <block id="072ce5964f5857c89ec5dc601b703af3" category="list-text">将鼠标悬停在卷上，然后选择一个可用选项来管理 Snapshot 副本：</block>
+  <block id="77920e8d9473162a2167976898eaa180" category="list-text">* 创建 Snapshot 副本 *</block>
+  <block id="ac5983a9eada1c7d1b2571955cdabebc" category="list-text">* 将卷还原到 Snapshot*</block>
+  <block id="b4d6c5073915bd6ebc84d2c6c45d666f" category="list-text">* 删除 Snapshot 副本 *</block>
+  <block id="df95b2ddbeefe0bd257bae9d1c7d663a" category="list-text">按照提示完成选定操作。</block>
+  <block id="f91674f3b22216fc484532cd24dda908" category="section-title">删除卷</block>
+  <block id="9497c556620605c0441cf034ff68a527" category="paragraph">删除不再需要的卷。</block>
+  <block id="0dedd92db5a9dbde64f4da7d6f9d44b2" category="list-text">将鼠标悬停在卷上，然后单击 * 删除 * 。</block>
+  <block id="085b0943196ae7c43e0a95af45bc731f" category="list-text">确认要删除此卷。</block>
+  <block id="111f8adcabf0dbf53cb2df15a658fa78" category="summary">了解 Cloud Manager 中 Azure NetApp Files 支持的新增功能。</block>
+  <block id="490414e0366b091220802d406e52c076" category="doc">新增功能</block>
+  <block id="38846f2e814afa2a7bb17dd217e62420" category="paragraph">了解 Cloud Manager 中的 Azure NetApp Files 的新增功能。</block>
+  <block id="13c380d451c296cda1d1289b9dc25114" category="section-title">2021 年 4 月 11 日</block>
+  <block id="860941d67aa8a8a442ba4a65191838cf" category="section-title">支持卷模板</block>
+  <block id="28c1b76e8b0c8f418301bc750b4e9f0e" category="paragraph">通过新的应用程序模板服务，您可以为 Azure NetApp Files 设置卷模板。此模板应使您的工作更轻松，因为模板中已定义某些卷参数，例如，容量池，大小，协议，卷应驻留的 vNet 和子网等。如果已预定义某个参数，则只需跳到下一个 volume 参数即可。</block>
+  <block id="65d2e55c231c87b516e734e63f823cf5" category="inline-link">了解应用程序模板以及如何在环境中使用这些模板</block>
+  <block id="cd05e30aad2bf16b78d020365a79dcae" category="list-text"><block ref="cd05e30aad2bf16b78d020365a79dcae" category="inline-link-rx"></block></block>
+  <block id="1636ba950a663744d701c73060d64523" category="inline-link-macro">了解如何使用模板创建 Azure NetApp Files 卷</block>
+  <block id="7c71a00ffc85c076da82cb46fe08c3e9" category="list-text"><block ref="7c71a00ffc85c076da82cb46fe08c3e9" category="inline-link-macro-rx"></block></block>
+  <block id="1758589feb07955b2d0a7b0b09d739c8" category="section-title">2021 年 3 月 8 日</block>
+  <block id="de5b4c52cc860c2f7cacca0bb7f4265f" category="section-title">动态更改服务级别</block>
+  <block id="65ade213f17aabb636c7c98c83fa9121" category="paragraph">现在，您可以动态更改卷的服务级别，以满足工作负载需求并优化成本。此卷将移至另一个容量池，而不会对该卷产生任何影响。</block>
+  <block id="f89e84889d5fd0c46e9997ddb21ac922" category="inline-link-macro">了解如何更改卷的服务级别</block>
+  <block id="44018d380623b1a890936411e2d032ce" category="paragraph"><block ref="62d875c6bc4ea91f55b1d274c3b3a04d" category="inline-link-macro-rx"></block>。</block>
+  <block id="4385db6cd2d63e547180bf0e667fe804" category="section-title">2020 年 8 月 3 日</block>
+  <block id="629ca03a8a495acd7bc18927ca4da6cc" category="section-title">Azure NetApp Files 设置和管理</block>
+  <block id="51faca1c58439a1d1223104a28f554cc" category="paragraph">直接从 Cloud Manager 设置和管理 Azure NetApp Files 。创建 Azure NetApp Files 工作环境后，您可以完成以下任务：</block>
+  <block id="a42ed9034f13a0f6a3660f2c241f605f" category="list-text">创建 NFS 和 SMB 卷。</block>
+  <block id="0d293213ebed3e92e24e1624dfd19aa2" category="list-text">管理容量池和卷快照</block>
+  <block id="e54595e40dfd177a2a9e671c794a3a4d" category="paragraph">您可以使用 Cloud Manager 创建，删除和还原卷快照。您还可以创建新的容量池并指定其服务级别。</block>
+  <block id="5054d68a0b2f03dece3eb72cfaa09427" category="list-text">通过更改卷大小和管理标记来编辑卷。</block>
+  <block id="396a3c9fb559d38e68f68ea139b3539a" category="paragraph">直接从 Cloud Manager 创建和管理 Azure NetApp Files 的功能取代了以前的数据迁移功能。</block>
+  <block id="a2eb09579e2fa44c07cf82cfba775030" category="section-title">2020 年 4 月 5 日</block>
+  <block id="02a58c551f186d8f833147198d69fb26" category="section-title">将数据迁移到 Azure NetApp Files</block>
+  <block id="8d30064c294030bc7a1446fe0cf94ca9" category="paragraph">现在，您可以直接从 Cloud Manager 将 NFS 或 SMB 数据迁移到 Azure NetApp Files 。数据同步由 NetApp 的 Cloud Sync 服务提供支持。</block>
+  <block id="af08318aa95b670c097bf944ab12d208" category="summary">设置工作环境后，您可以创建 Azure NetApp Files 帐户，容量池和卷。</block>
+  <block id="ba0aa3e7264cbd8d5a1204a3f3d868cc" category="doc">为 Azure NetApp Files 创建和挂载卷</block>
+  <block id="1c27e11c5e65b93611e6f5ce640f8184" category="section-title">创建卷</block>
+  <block id="15b71829402124199d38fc483f8a71b5" category="paragraph">您可以在新的或现有的 Azure NetApp Files 帐户中创建 NFS 或 SMB 卷。</block>
+  <block id="efc4120a3fbfbea33245fb931c324492" category="inline-xref">这些步骤</block>
+  <block id="0073916db272db24e4fb9b9c6bc9d6f6" category="paragraph">通过 Cloud Manager 的 " 模板 " 功能，您可以创建针对特定应用程序（例如数据库或流式服务）的工作负载要求进行优化的卷。如果您的组织已创建应使用的卷模板，请按照说明进行操作 <block ref="841f2986c591e442944fbc4b9e18c81f" category="inline-xref-macro-rx"></block>。</block>
+  <block id="135b308ed83c53f1516b7c754566d1c4" category="list-title">开始之前</block>
+  <block id="871a29db0a928b46295d82cee2357c13" category="list-text">如果要使用 SMB 、必须设置 DNS 和 Active Directory 。</block>
+  <block id="943219d5074bb5ad25a6a5caf2ffdd2a" category="list-text">在计划创建 SMB 卷时，您必须具有可连接到的 Windows Active Directory 服务器。您将在创建卷时输入此信息。</block>
+  <block id="3bf992a109f2a93d6d964ab2c501e805" category="list-text">打开 Azure NetApp Files 工作环境。</block>
+  <block id="e0e02b01eefffa92ef6dd41ca0bfddaa" category="list-text">单击 * 添加新卷 * 。</block>
+  <block id="8efbe080646813cd33c5297ebb1ef190" category="list-text">在每个页面上提供所需信息：</block>
+  <block id="0df0074f5bda9b547c12ff0ac8f4a896" category="list-text">* Azure NetApp Files Account* ：选择现有 Azure NetApp Files 帐户或创建新帐户。创建新帐户时，您还可以选择要使用的资源组。</block>
+  <block id="13ecbacd691c26d682199c2a13ae7ca8" category="inline-image-macro">创建 Azure NetApp Files 帐户所需字段的屏幕截图，其中包括名称， Azure 订阅，位置和资源组。</block>
+  <block id="be40baf84cfc673a091dfd1b17d7663a" category="paragraph"><block ref="be40baf84cfc673a091dfd1b17d7663a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0dc3251c60a979588ce5f7932e69ba87" category="list-text">* 容量池 * ：选择现有容量池或创建新容量池。</block>
+  <block id="79f05e8f99917560625d1cf3f2d4fc5d" category="inline-link">服务级别</block>
+  <block id="c35795b8ffe511f480a251678339892b" category="paragraph">如果要创建新的容量池，则需要指定一个大小并选择<block ref="f998dd47925b345cb96cc9547dcf35dc" category="inline-link-rx"></block>。</block>
+  <block id="a3c94c8b9f3c752262861375cf98a86e" category="paragraph">容量池的最小大小为 4 TB 。您可以指定大小的倍数为 4 TB 。</block>
+  <block id="485ef9124372f546b80f3713ee3e96b4" category="list-text">* 详细信息和标记 * ：输入卷名称和大小，卷应驻留的 vNet 和子网，并可选择指定卷的标记。</block>
+  <block id="3b608e06daf087ff8d8ec6c3426b4e86" category="list-text">* 协议 * ：选择 NFS 或 SMB 协议并输入所需信息。</block>
+  <block id="91080ec993aad166af2bca2fdc134255" category="paragraph">下面是 NFS 详细信息的示例。</block>
+  <block id="dea14d87fa3d65df58f3beda6ccb3a30" category="inline-image-macro">设置 NFS 卷所需字段的屏幕截图。</block>
+  <block id="643c51aaf0a263e7e8a915f608bbb548" category="paragraph"><block ref="643c51aaf0a263e7e8a915f608bbb548" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8f470daf6cfa2970c8395cc6be9c7612" category="paragraph">下面是 SMB 的详细信息示例。设置第一个 SMB 卷时，您需要在下一页提供 Active Directory 信息。</block>
+  <block id="384442b7c021ea920d5444dad3c474e3" category="inline-image-macro">设置 SMB 卷所需字段的屏幕截图。</block>
+  <block id="f4b5aaab764c0b2d36fafa41b62e1b0d" category="paragraph"><block ref="f4b5aaab764c0b2d36fafa41b62e1b0d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="405c1e241cc1b6685d6c0cc7dbbc8042" category="list-text">如果要基于现有卷的快照创建此卷，请从 Snapshot 名称下拉列表中选择此快照。</block>
+  <block id="5e65e2e51d0d291499a42f54730e645c" category="list-text">单击 * 添加卷 * 。</block>
+  <block id="45dbe3c136df615d693b80183c277a3b" category="paragraph">此时，新卷将添加到工作环境中。</block>
+  <block id="eaae7feedfb57c4ccdcc53c186726c56" category="inline-xref">挂载云卷</block>
+  <block id="2f8952d0a4fb138ef90f78fb9a50fe88" category="paragraph">继续 <block ref="b0f2178360372267ad19e1e8e4741e99" category="inline-xref-macro-rx"></block>。</block>
+  <block id="a37f6000ecd62b3a2058de32fa603d0a" category="section-title">使用模板创建卷</block>
+  <block id="4a856903cf54bbb57bd5703d54583103" category="paragraph">如果您的组织已创建 Azure NetApp Files 卷模板，以便您可以部署针对特定应用程序的工作负载要求进行优化的卷，请按照本节中的步骤进行操作。</block>
+  <block id="8d69897f39fda1e4779ad2d9ff4939c4" category="paragraph">此模板应使您的工作更轻松，因为模板中已定义某些卷参数，例如，容量池，大小，协议，卷应驻留的 vNet 和子网等。如果已预定义某个参数，则只需跳到下一个 volume 参数即可。</block>
+  <block id="f1a38681016ccf53a8d2c2fad98c7db2" category="list-text">在 " 画布 " 页面上，单击要配置卷的 Azure NetApp Files 工作环境。</block>
+  <block id="024205acf9405311336c02bbd2193b70" category="inline-image-macro">更多按钮</block>
+  <block id="f96393c48de5eddb1a2818124e9040b6" category="list-text">单击 <block ref="c01b692574fda287c7455bfbcec2709c" category="inline-image-macro-rx" type="image"></block> &gt; * 从模板添加卷 * 。</block>
+  <block id="74099e7b70c30e3a55db543cda9bfc1e" category="inline-image-macro">显示如何从模板添加新卷的屏幕截图。</block>
+  <block id="098587c5859901ecc32e7a709cb2129f" category="paragraph"><block ref="098587c5859901ecc32e7a709cb2129f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5b33742921c3a09b3c0916cff2d87632" category="list-text">在 _Select Template_ 页面中，选择要用于创建卷的模板，然后单击 * 下一步 * 。</block>
+  <block id="41fdbb8293e553892079d0e7ad8a9ad9" category="inline-image-macro">可用应用程序模板的屏幕截图。</block>
+  <block id="e9be4d5050c4e00aff6426b7045f1b6a" category="paragraph"><block ref="e9be4d5050c4e00aff6426b7045f1b6a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8675916eaff2fb10955e8a3b1b14108f" category="paragraph">此时将显示 _Define Parameters_页面 。</block>
+  <block id="19f5b7f92268b2f8e63e4083819666c9" category="inline-image-macro">显示创建卷所需填写的空白模板的屏幕截图。</block>
+  <block id="93fdd25da4e72c932b99d601b637202f" category="paragraph"><block ref="93fdd25da4e72c932b99d601b637202f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="31f425aaa6a26f3fc5e635704753602f" category="paragraph">* 注： * 如果要查看这些参数的值，您可以单击 * 显示只读参数 * 复选框以显示模板锁定的所有字段。默认情况下，这些预定义字段将被隐藏，并且仅显示需要填写的字段。</block>
+  <block id="b4798c3f6907cfb67d2e44f900cd8761" category="inline-xref">正在创建卷</block>
+  <block id="10b6f03dce4e3f947d351798e239e1a9" category="list-text">为模板中未硬编码的所有参数添加值。请参见 <block ref="0987d6f2734ae944e1736c1f24a760ec" category="inline-xref-macro-rx"></block> 有关部署 Azure NetApp Files 卷所需完成的所有参数的详细信息。</block>
+  <block id="2bc51d1d472e80f2611fe5ff280c4ebe" category="list-text">定义完此卷所需的所有参数后，单击 * 运行模板 * 。</block>
+  <block id="b185109168e53693f7b6943d7df66166" category="paragraph">Cloud Manager 会配置卷并显示一个页面，以便您可以查看进度。</block>
+  <block id="40136e65ff57723941fc2af2bf21d54a" category="inline-image-macro">显示通过模板创建新卷的进度的屏幕截图。</block>
+  <block id="4ad07dd99a58c5fa556826f4f972a56e" category="paragraph"><block ref="4ad07dd99a58c5fa556826f4f972a56e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3fcf4599fd910141dcd628a7411238d5" category="paragraph">然后，新卷将添加到工作环境中。</block>
+  <block id="0753d577f87c3ce7385e295a5cc23407" category="paragraph">继续挂载云卷。</block>
+  <block id="2a4a19d3d732c5f7aa35fa729ac0d8ac" category="section-title">挂载卷</block>
+  <block id="86a3efaabfd178d684bcd98f4cd6434c" category="paragraph">从 Cloud Manager 中访问挂载说明，以便将卷挂载到主机。</block>
+  <block id="8298547bbbd227879ca27d72eedeb07a" category="list-text">将鼠标悬停在卷上，然后选择 * 挂载卷 * 。</block>
+  <block id="ed098667e58a3c583c4147e4fd6baaa8" category="inline-image-macro">将光标悬停在卷上时可用操作的屏幕截图。</block>
+  <block id="2bfbdc93a5a4003da1039544054d6805" category="paragraph"><block ref="2bfbdc93a5a4003da1039544054d6805" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="38aa5b57f82843fe74bb954a343bf4e0" category="list-text">按照说明挂载卷。</block>
+  <block id="8314edb21bf66f4096470cb83529f253" category="summary">Azure NetApp Files 支持企业在 Azure 中迁移和运行性能密集型且延迟敏感的核心业务关键型应用程序，而无需重新考虑云因素。</block>
+  <block id="8b53faee27870b72e0be69261d54a7ee" category="doc">了解 Azure NetApp Files</block>
+  <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">功能</block>
+  <block id="b4afab774d5aae036a66f2e95c63406b" category="list-text">支持多个协议，可以 " 提升和迁移 " Linux 和 Windows 应用程序，以便在 Azure 中无缝运行。</block>
+  <block id="86431e70f2e01436434235b95f27507f" category="list-text">多个性能层可以与工作负载性能要求保持一致。</block>
+  <block id="0f5101975c831a1a6350155e818d4cbf" category="list-text">通过 SAP HANA ， GDPR 和 HIPAA 等领先认证，可以将要求最苛刻的工作负载迁移到 Azure 。</block>
+  <block id="4b892d08b42aafcd301b83ab05b6e993" category="section-title">Cloud Manager 中的其他功能</block>
+  <block id="f6c2d8c0ac94af2ace6bb1a673a447e2" category="list-text">直接从 Cloud Manager 将 NFS 或 SMB 数据迁移到 Azure NetApp Files 。数据迁移由 NetApp 的 Cloud Sync 服务提供支持。</block>
+  <block id="c9e8b2e7aec1baa65efcbe84dfc9d0ed" category="inline-link">了解有关 Cloud Sync 的更多信息</block>
+  <block id="707476b7ceb8bcfdb9c13e59859ae97a" category="paragraph"><block ref="707476b7ceb8bcfdb9c13e59859ae97a" category="inline-link-rx"></block></block>
+  <block id="25c46bef01bcfa77e5905b1d3308762a" category="list-text">利用人工智能（ AI ）驱动的技术，云数据感知可以帮助您了解数据环境并识别 Azure NetApp Files 帐户中的敏感数据。</block>
+  <block id="a11b0fe7d09898eeb7b50552e83ef426" category="inline-link">了解有关 Cloud Data sense 的更多信息</block>
+  <block id="3af0f3d8f43764595483a67930d47716" category="paragraph"><block ref="3af0f3d8f43764595483a67930d47716" category="inline-link-rx"></block></block>
+  <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">成本</block>
+  <block id="b8371ae9d98b29b8335a4aea09cdaff3" category="inline-link">查看 Azure NetApp Files 定价</block>
+  <block id="4b3f21f8a5b6bf8c27f851053be34ac4" category="paragraph"><block ref="4b3f21f8a5b6bf8c27f851053be34ac4" category="inline-link-rx"></block></block>
+  <block id="78f4bff896307cc838c262e1e49d9102" category="paragraph">请注意，您的订阅和费用由 Azure NetApp Files 服务维护，而不是由 Cloud Manager 维护。</block>
+  <block id="8c4b25218155a1fdb972f4169855d04f" category="section-title">支持的区域</block>
+  <block id="d6c4ca89b6d4950d0522d6198b27af71" category="inline-link">查看支持的 Azure 区域</block>
+  <block id="e478c46d3908f35ce837f4cc77afb89b" category="paragraph"><block ref="e478c46d3908f35ce837f4cc77afb89b" category="inline-link-rx"></block></block>
+  <block id="20c404f3ca0633629eee9b1b4ccd6737" category="section-title">获取帮助</block>
+  <block id="edc3629fc8102552dbd6ec1e10e2b821" category="paragraph">对于与 Azure NetApp Files 相关的技术支持问题，请使用 Azure 门户将支持请求记录到 Microsoft 。选择关联的 Microsoft 订阅，然后在 * 存储 * 下选择 * Azure NetApp Files * 服务名称。提供创建 Microsoft 支持请求所需的其余信息。</block>
+  <block id="f6bd0d7447ff66cc6b859603a88fbde9" category="section-title">相关链接</block>
+  <block id="aaffbc2ddc4092e845b033a565e591fb" category="inline-link">NetApp 云中心： Azure NetApp Files</block>
+  <block id="2a8128d1d5b93234cc425f95b2e992d8" category="list-text"><block ref="2a8128d1d5b93234cc425f95b2e992d8" category="inline-link-rx"></block></block>
+  <block id="6c32a3d0f1a665987b98dde5a0f96d7d" category="inline-link">Azure NetApp Files 文档</block>
+  <block id="844f85f22af5197ff73f93313cd94cd1" category="list-text"><block ref="844f85f22af5197ff73f93313cd94cd1" category="inline-link-rx"></block></block>
+  <block id="815e6b3583bbc9969fd306b9391ed0cb" category="inline-link">Cloud Sync 文档</block>
+  <block id="e66ce730725b027d172b1b3ee7612614" category="list-text"><block ref="e66ce730725b027d172b1b3ee7612614" category="inline-link-rx"></block></block>
+  <block id="ce21e7ae4271271294ccbf54c8fd6864" category="summary">NetApp 通过多种方式为 Cloud Manager 提供支持。全天候提供丰富的免费自助支持选项，例如知识库（ KB ）文章和社区论坛。您的支持注册包括通过 Web 服务单提供的远程技术支持。</block>
+  <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">获取帮助</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-link-macro"></block>
+  <block id="7ccaf84febc0ed633fbdbadb8d488a7e" category="paragraph"><block ref="7ccaf84febc0ed633fbdbadb8d488a7e" category="inline-link-macro-rx"></block></block>
+  <block id="314401814eaa768c4f6d593c27a2981d" category="summary">此操作将从 Cloud Manager 中删除 Azure NetApp Files 。它不会删除您的 Azure NetApp Files 帐户或卷。您可以随时将 Azure NetApp Files 重新添加到 Cloud Manager 中。</block>
+  <block id="a5cd00357f60ad0eaa681bb68df15c6d" category="doc">删除 Azure NetApp Files</block>
+  <block id="efe74b5ca066da05f9df0c24eabbf492" category="list-text">在页面右上角，选择操作菜单，然后单击 * 删除 Azure NetApp Files * 。</block>
+  <block id="a6ca89f466d19e87794988d8a1f25d64" category="inline-image-macro">单击删除 Azure NetApp Files 以从 Cloud Manager 界面中删除卷的屏幕截图。</block>
+  <block id="90ab7d419e5b436936c80f21ee230621" category="paragraph"><block ref="90ab7d419e5b436936c80f21ee230621" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="40b851aafab82c78484c46169f816fd2" category="list-text">单击 * 删除 * 进行确认。</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律声明</block>
+  <block id="c59ae8d7beeb519a23478ab048af482c" category="paragraph"><block ref="c59ae8d7beeb519a23478ab048af482c" category="inline-link-macro-rx"></block></block>
+  <block id="6f2ac1cf1da8ec34232c651d4bba0149" category="paragraph"><block ref="6f2ac1cf1da8ec34232c651d4bba0149" category="inline-link-macro-rx"></block></block>
+  <block id="4940124e8487cb4ea36f1511a195cf66" category="inline-link-macro">有关 Cloud Manager 3.9 的注意事项</block>
+  <block id="c069fcc68c5dfa73ccc99924c836cae9" category="paragraph"><block ref="c069fcc68c5dfa73ccc99924c836cae9" category="inline-link-macro-rx"></block></block>
+  <block id="d9ce9b41f2053c22760c9212b1f8a063" category="summary">设置 Azure Active Directory 应用程序后，请在 Cloud Manager 中创建 Azure NetApp Files 工作环境，以便开始创建所需的卷。</block>
+  <block id="c5c12e22be965b4ae0e9fc5e1618bdbe" category="doc">创建 Azure NetApp Files 工作环境</block>
+  <block id="8952189c40e72880516b5d0e74b846e2" category="paragraph">设置 Azure Active Directory 应用程序后，请在 Cloud Manager 中创建 Azure NetApp Files 工作环境，以便您可以开始创建所需的卷。</block>
+  <block id="71f39774f72466b34fa315e04ab5f4a1" category="list-text">在 " 画布 " 页面中，单击 * 添加工作环境 * 。</block>
+  <block id="c67d1c774e8a4bdd8581dc693236aa4d" category="list-text">选择 * Microsoft Azure* ，然后选择 * Azure NetApp Files * 。</block>
+  <block id="44d9c1472225c5cada2a898e403242e6" category="list-text">提供有关先前设置的 AD 应用程序的详细信息。</block>
+  <block id="54cdf2467ba32a755c7c96d45ce87ed5" category="inline-image-macro">创建 Azure NetApp Files 工作环境所需字段的屏幕截图，其中包括名称，应用程序 ID ，客户端密钥和目录 ID 。</block>
+  <block id="41b7388474e973fc8cb64862d2cb06f5" category="paragraph"><block ref="41b7388474e973fc8cb64862d2cb06f5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b6a6d7c8275174f2de092d93ad59b406" category="paragraph">现在，您应该拥有一个 Azure NetApp Files 工作环境。</block>
+  <block id="c6cfa7b72473b659c12fde377c3c0fd2" category="inline-image-macro">Azure NetApp Files 工作环境的屏幕截图。</block>
+  <block id="fc59e05409a5663145615b064d40391a" category="paragraph"><block ref="fc59e05409a5663145615b064d40391a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2d8388ef854dfa09cecb11936ccce248" category="inline-link-macro">开始创建和管理卷</block>
+  <block id="7287a568988e3d4791216dba265eeae9" category="paragraph"><block ref="1e09faaddd6af4b1a47324cf37312df0" category="inline-link-macro-rx"></block>。</block>
+  <block id="d29fe95ea2ec23abbb9e421759e64b76" category="summary">Azure NetApp Files 是一种 Microsoft Azure 原生 ，可为您的核心业务应用程序提供高性能文件存储服务。本文档介绍如何使用 NetApp Cloud Manager 设置和管理 Azure NetApp Files 。</block>
+  <block id="3c10116b37b407ac79092a38ffb292e4" category="summary">在向 NetApp 技术支持创建支持案例之前，您需要先将 NetApp 支持站点帐户添加到 Cloud Manager 中，然后注册获取支持。</block>
+  <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">注册以获得支持</block>
+  <block id="d53e2559d6ace0e907fc57192bf286b6" category="paragraph"><block ref="d53e2559d6ace0e907fc57192bf286b6" category="inline-link-macro-rx"></block></block>
+  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">所有 Cloud Manager 文档</block>
+  <block id="d75d347ae1d51e933d39fea688b0abf1" category="sidebar">Azure NetApp Files 文档</block>
+  <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">发行说明</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">入门</block>
+  <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">快速入门</block>
+  <block id="edbcf53081d21cc9d84e0c1b1c31c425" category="sidebar">创建工作环境</block>
+  <block id="6ade0d3f74b8a5014c9cb307d47a0cb4" category="sidebar">使用 Azure NetApp Files</block>
+  <block id="9be5a2eae9bab39aee7d0161c137cd43" category="sidebar">创建并挂载卷</block>
+  <block id="9038e7cfcfe9bb9df9afd31371070be8" category="sidebar">管理现有卷</block>
+  <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知识和支持</block>
+  <block id="e2439a8512b353f75391ba9c346bc84d" category="sidebar">管理卷</block>
+  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">博客社区</block>
+  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 社区</block>
+  <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central 博客</block>
+  <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">云网络研讨会</block>
+</blocks>

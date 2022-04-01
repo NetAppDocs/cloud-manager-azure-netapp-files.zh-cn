@@ -1,0 +1,72 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes' 
+summary: 了解 Cloud Manager 中 Azure NetApp Files 支持的新增功能。 
+---
+= 新增功能
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+了解 Cloud Manager 中的 Azure NetApp Files 的新增功能。
+
+
+
+== 2021 年 4 月 11 日
+
+
+
+=== 支持卷模板
+
+通过新的应用程序模板服务，您可以为 Azure NetApp Files 设置卷模板。此模板应使您的工作更轻松，因为模板中已定义某些卷参数，例如，容量池，大小，协议，卷应驻留的 vNet 和子网等。如果已预定义某个参数，则只需跳到下一个 volume 参数即可。
+
+* https://docs.netapp.com/us-en/cloud-manager-app-template/concept-resource-templates.html["了解应用程序模板以及如何在环境中使用这些模板"^]
+* link:task-create-volumes.html["了解如何使用模板创建 Azure NetApp Files 卷"]
+
+
+
+
+== 2021 年 3 月 8 日
+
+
+
+=== 动态更改服务级别
+
+现在，您可以动态更改卷的服务级别，以满足工作负载需求并优化成本。此卷将移至另一个容量池，而不会对该卷产生任何影响。
+
+link:task-manage-volumes.html#change-the-volumes-service-level["了解如何更改卷的服务级别"]。
+
+
+
+== 2020 年 8 月 3 日
+
+
+
+=== Azure NetApp Files 设置和管理
+
+直接从 Cloud Manager 设置和管理 Azure NetApp Files 。创建 Azure NetApp Files 工作环境后，您可以完成以下任务：
+
+* 创建 NFS 和 SMB 卷。
+* 管理容量池和卷快照
++
+您可以使用 Cloud Manager 创建，删除和还原卷快照。您还可以创建新的容量池并指定其服务级别。
+
+* 通过更改卷大小和管理标记来编辑卷。
+
+
+直接从 Cloud Manager 创建和管理 Azure NetApp Files 的功能取代了以前的数据迁移功能。
+
+
+
+== 2020 年 4 月 5 日
+
+
+
+=== 将数据迁移到 Azure NetApp Files
+
+现在，您可以直接从 Cloud Manager 将 NFS 或 SMB 数据迁移到 Azure NetApp Files 。数据同步由 NetApp 的 Cloud Sync 服务提供支持。

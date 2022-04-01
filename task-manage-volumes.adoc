@@ -1,0 +1,74 @@
+---
+sidebar: sidebar 
+permalink: task-manage-volumes.html 
+keywords: azure netapp files, delete volumes, delete nfs volumes, netapp account, capacity pool, change service level 
+summary: 设置工作环境后，您可以管理 Azure NetApp Files 帐户，容量池，卷和快照。 
+---
+= 管理 Azure NetApp Files 的卷
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以根据存储需求的变化管理现有卷。您可以编辑卷，更改卷的服务级别，管理 Snapshot 副本以及删除卷。
+
+
+
+== 编辑卷的大小和标记
+
+创建卷后，您可以随时修改其大小和标记。
+
+.步骤
+. 打开工作环境。
+. 将鼠标悬停在卷上并选择 * 编辑 * 。
+. 根据需要修改大小和标记。
+. 单击 * 应用 * 。
+
+
+
+
+== 更改卷的服务级别
+
+创建卷后，只要目标容量池已存在，您就可以随时更改服务级别。
+
+.步骤
+. 打开工作环境。
+. 将鼠标悬停在卷上并选择 * 更改服务级别 * 。
+. 选择提供所需服务级别的容量池。
+. 单击 * 更改 * 。
+
+
+此卷将移至另一个容量池，而不会对该卷产生任何影响。
+
+
+
+== 管理 Snapshot 副本
+
+Snapshot 副本可为卷提供时间点副本。创建 Snapshot 副本，将数据还原到新卷以及删除 Snapshot 副本。
+
+.步骤
+. 打开工作环境。
+. 将鼠标悬停在卷上，然后选择一个可用选项来管理 Snapshot 副本：
++
+** * 创建 Snapshot 副本 *
+** * 将卷还原到 Snapshot*
+** * 删除 Snapshot 副本 *
+
+
+. 按照提示完成选定操作。
+
+
+
+
+== 删除卷
+
+删除不再需要的卷。
+
+.步骤
+. 打开工作环境。
+. 将鼠标悬停在卷上，然后单击 * 删除 * 。
+. 确认要删除此卷。
+

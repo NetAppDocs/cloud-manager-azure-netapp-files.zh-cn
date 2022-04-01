@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: task-remove-working-env.html 
+keywords: remove azure netapp files, remove anf, remove working environment 
+summary: 此操作将从 Cloud Manager 中删除 Azure NetApp Files 。它不会删除您的 Azure NetApp Files 帐户或卷。您可以随时将 Azure NetApp Files 重新添加到 Cloud Manager 中。 
+---
+= 删除 Azure NetApp Files
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+此操作将从 Cloud Manager 中删除 Azure NetApp Files 。它不会删除您的 Azure NetApp Files 帐户或卷。您可以随时将 Azure NetApp Files 重新添加到 Cloud Manager 中。
+
+.步骤
+. 打开 Azure NetApp Files 工作环境。
+. 在页面右上角，选择操作菜单，然后单击 * 删除 Azure NetApp Files * 。
++
+image:screenshot_anf_remove.gif["单击删除 Azure NetApp Files 以从 Cloud Manager 界面中删除卷的屏幕截图。"]
+
+. 单击 * 删除 * 进行确认。
+

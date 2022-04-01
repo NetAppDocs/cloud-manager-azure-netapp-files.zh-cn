@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: task-quick-start.html 
+keywords: set up azure netapp files, quick start 
+summary: 按照以下步骤快速入门，或者向下滚动到其余部分以了解完整详细信息。 
+---
+= Azure NetApp Files 快速入门
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+按照以下步骤快速入门，或访问链接以获取完整详细信息。
+
+[role="quick-margin-para"]
+从 Azure 中，向 Azure AD 应用程序授予权限，并复制应用程序（客户端） ID ，目录（租户） ID 和客户端密钥值。
+
+[role="quick-margin-para"]
+link:task-set-up-azure-ad.html["了解如何设置 Azure AD 应用程序"]。
+
+[role="quick-margin-para"]
+在 Cloud Manager 中，单击 * 添加工作环境 * > * Microsoft Azure* > * Azure NetApp Files * ，然后提供有关 AD 应用程序的详细信息。
+
+[role="quick-margin-para"]
+link:task-create-working-env.html["了解如何创建工作环境"]。
