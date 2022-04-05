@@ -6,6 +6,7 @@ summary: 设置工作环境后，您可以创建 Azure NetApp Files 帐户，容
 ---
 = 为 Azure NetApp Files 创建和挂载卷
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

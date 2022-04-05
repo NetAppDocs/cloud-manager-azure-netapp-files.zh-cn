@@ -6,6 +6,7 @@ summary: 此操作将从 Cloud Manager 中删除 Azure NetApp Files 。它不会
 ---
 = 删除 Azure NetApp Files
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

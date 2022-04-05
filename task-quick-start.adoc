@@ -6,6 +6,7 @@ summary: 按照以下步骤快速入门，或者向下滚动到其余部分以�
 ---
 = Azure NetApp Files 快速入门
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: Cloud Manager 需要设置和管理 Azure NetApp Files 的权限。您�
 ---
 = 设置 Azure AD 应用程序
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
