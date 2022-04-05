@@ -26,7 +26,7 @@ summary: 了解 Cloud Manager 中 Azure NetApp Files 支持的新增功能。
 通过新的应用程序模板服务，您可以为 Azure NetApp Files 设置卷模板。此模板应使您的工作更轻松，因为模板中已定义某些卷参数，例如，容量池，大小，协议，卷应驻留的 vNet 和子网等。如果已预定义某个参数，则只需跳到下一个 volume 参数即可。
 
 * https://docs.netapp.com/us-en/cloud-manager-app-template/concept-resource-templates.html["了解应用程序模板以及如何在环境中使用这些模板"^]
-* link:task-create-volumes.html["了解如何使用模板创建 Azure NetApp Files 卷"]
+* https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-create-volumes.html["了解如何使用模板创建 Azure NetApp Files 卷"]
 
 
 
@@ -39,7 +39,7 @@ summary: 了解 Cloud Manager 中 Azure NetApp Files 支持的新增功能。
 
 现在，您可以动态更改卷的服务级别，以满足工作负载需求并优化成本。此卷将移至另一个容量池，而不会对该卷产生任何影响。
 
-link:task-manage-volumes.html#change-the-volumes-service-level["了解如何更改卷的服务级别"]。
+https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-manage-volumes.html#change-the-volumes-service-level["了解如何更改卷的服务级别"]。
 
 
 

@@ -100,19 +100,14 @@
   <block id="111f8adcabf0dbf53cb2df15a658fa78" category="summary">了解 Cloud Manager 中 Azure NetApp Files 支持的新增功能。</block>
   <block id="490414e0366b091220802d406e52c076" category="doc">新增功能</block>
   <block id="38846f2e814afa2a7bb17dd217e62420" category="paragraph">了解 Cloud Manager 中的 Azure NetApp Files 的新增功能。</block>
-  <block id="13c380d451c296cda1d1289b9dc25114" category="section-title">2021 年 4 月 11 日</block>
   <block id="860941d67aa8a8a442ba4a65191838cf" category="section-title">支持卷模板</block>
   <block id="28c1b76e8b0c8f418301bc750b4e9f0e" category="paragraph">通过新的应用程序模板服务，您可以为 Azure NetApp Files 设置卷模板。此模板应使您的工作更轻松，因为模板中已定义某些卷参数，例如，容量池，大小，协议，卷应驻留的 vNet 和子网等。如果已预定义某个参数，则只需跳到下一个 volume 参数即可。</block>
   <block id="65d2e55c231c87b516e734e63f823cf5" category="inline-link">了解应用程序模板以及如何在环境中使用这些模板</block>
   <block id="cd05e30aad2bf16b78d020365a79dcae" category="list-text"><block ref="cd05e30aad2bf16b78d020365a79dcae" category="inline-link-rx"></block></block>
   <block id="1636ba950a663744d701c73060d64523" category="inline-link-macro">了解如何使用模板创建 Azure NetApp Files 卷</block>
-  <block id="7c71a00ffc85c076da82cb46fe08c3e9" category="list-text"><block ref="7c71a00ffc85c076da82cb46fe08c3e9" category="inline-link-macro-rx"></block></block>
-  <block id="1758589feb07955b2d0a7b0b09d739c8" category="section-title">2021 年 3 月 8 日</block>
   <block id="de5b4c52cc860c2f7cacca0bb7f4265f" category="section-title">动态更改服务级别</block>
   <block id="65ade213f17aabb636c7c98c83fa9121" category="paragraph">现在，您可以动态更改卷的服务级别，以满足工作负载需求并优化成本。此卷将移至另一个容量池，而不会对该卷产生任何影响。</block>
   <block id="f89e84889d5fd0c46e9997ddb21ac922" category="inline-link-macro">了解如何更改卷的服务级别</block>
-  <block id="44018d380623b1a890936411e2d032ce" category="paragraph"><block ref="62d875c6bc4ea91f55b1d274c3b3a04d" category="inline-link-macro-rx"></block>。</block>
-  <block id="4385db6cd2d63e547180bf0e667fe804" category="section-title">2020 年 8 月 3 日</block>
   <block id="629ca03a8a495acd7bc18927ca4da6cc" category="section-title">Azure NetApp Files 设置和管理</block>
   <block id="51faca1c58439a1d1223104a28f554cc" category="paragraph">直接从 Cloud Manager 设置和管理 Azure NetApp Files 。创建 Azure NetApp Files 工作环境后，您可以完成以下任务：</block>
   <block id="a42ed9034f13a0f6a3660f2c241f605f" category="list-text">创建 NFS 和 SMB 卷。</block>
@@ -120,7 +115,6 @@
   <block id="e54595e40dfd177a2a9e671c794a3a4d" category="paragraph">您可以使用 Cloud Manager 创建，删除和还原卷快照。您还可以创建新的容量池并指定其服务级别。</block>
   <block id="5054d68a0b2f03dece3eb72cfaa09427" category="list-text">通过更改卷大小和管理标记来编辑卷。</block>
   <block id="396a3c9fb559d38e68f68ea139b3539a" category="paragraph">直接从 Cloud Manager 创建和管理 Azure NetApp Files 的功能取代了以前的数据迁移功能。</block>
-  <block id="a2eb09579e2fa44c07cf82cfba775030" category="section-title">2020 年 4 月 5 日</block>
   <block id="02a58c551f186d8f833147198d69fb26" category="section-title">将数据迁移到 Azure NetApp Files</block>
   <block id="8d30064c294030bc7a1446fe0cf94ca9" category="paragraph">现在，您可以直接从 Cloud Manager 将 NFS 或 SMB 数据迁移到 Azure NetApp Files 。数据同步由 NetApp 的 Cloud Sync 服务提供支持。</block>
   <block id="af08318aa95b670c097bf944ab12d208" category="summary">设置工作环境后，您可以创建 Azure NetApp Files 帐户，容量池和卷。</block>
@@ -260,4 +254,10 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 社区</block>
   <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central 博客</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">云网络研讨会</block>
+  <block id="29c251ed5a57bbffe470654ccbbe714c" category="section-title">2021 年 4 月 11 日</block>
+  <block id="5651031c9f0714bccf2089b101c736e0" category="list-text"><block ref="5651031c9f0714bccf2089b101c736e0" category="inline-link-rx"></block></block>
+  <block id="dbbd746e2d2c019dcb0c3c40b74f4f75" category="section-title">2021 年 3 月 8 日</block>
+  <block id="1ae0904e8670b3e6cfc9006eb635216b" category="paragraph"><block ref="e311d6cb2bd5a49340f86a76ff0511b7" category="inline-link-rx"></block>。</block>
+  <block id="95fa237a7a6265df02b6172c4be387f7" category="section-title">2020 年 8 月 3 日</block>
+  <block id="173fd2f937506a4111b0bc09349619a8" category="section-title">2020 年 4 月 5 日</block>
 </blocks>
