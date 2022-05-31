@@ -89,7 +89,7 @@ image:screenshot_azure_access_control.gif["显示在 Azure 门户中添加自定
 [source, json]
 ----
 "actions": [
-    "Microsoft.NetApp/*",
+    "Microsoft.NetApp/*"
     ],
 ----
 .. 单击 * 保存 * ，单击 * 下一步 * ，然后单击 * 创建 * 。
