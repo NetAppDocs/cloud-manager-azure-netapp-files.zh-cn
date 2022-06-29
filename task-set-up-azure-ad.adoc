@@ -89,7 +89,13 @@ image:screenshot_azure_access_control.gif["显示在 Azure 门户中添加自定
 [source, json]
 ----
 "actions": [
-    "Microsoft.NetApp/*"
+    "Microsoft.NetApp/*",
+    "Microsoft.Resources/resources/read",
+    "Microsoft.Resources/subscriptions/resourceGroups/read",
+    "Microsoft.Resources/subscriptions/resourcegroups/resources/read",
+    "Microsoft.Resources/subscriptions/resourceGroups/write",
+    "Microsoft.Network/virtualNetworks/read",
+    "Microsoft.Insights/Metrics/Read"
     ],
 ----
 .. 单击 * 保存 * ，单击 * 下一步 * ，然后单击 * 创建 * 。
